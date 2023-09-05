@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TipCalculator.PercentPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Percentage Calculator">
+
+    <StackLayout Padding="25" BackgroundColor="#222831">
+
+        <!--  Result Display  -->
+        <Label
+            x:Name="lblDisplay2"
+            Margin="25,50,25,5"
+            FontSize="37.5"
+            HorizontalTextAlignment="Center"
+            Text="Results"
+            TextColor="White" />
+        <Label
+            HorizontalTextAlignment="Center"
+            Text="The answer will be displayed here!"
+            TextColor="LightGray" />
+
+        <BoxView
+            Margin="12.5,50"
+            BackgroundColor="#00ADB5"
+            HeightRequest="1" />
+
+        <!--  Specify Value  -->
+        <Frame
+            BackgroundColor="#222831"
+            BorderColor="#00ADB5"
+            CornerRadius="25">
+            <StackLayout>
+                <Label Text="Insert your start value here:" TextColor="White" />
+                <Entry
+                    x:Name="initialValue"
+                    Margin="0,0,0,50"
+                    Keyboard="Numeric"
+                    Placeholder="Initial Value"
+                    PlaceholderColor="LightGray"
+                    TextColor="White" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        x:Name="percentOf"
+                        Margin="12.5,0"
+                        BackgroundColor="#00ADB5"
+                        CornerRadius="75"
+                        FontSize="Large"
+                        Text="(%)"
+                        TextColor="#222831" />
+                    <Label
+                        Grid.Row="1"
+                        HorizontalTextAlignment="Center"
+                        Text="Percent Of"
+                        TextColor="LightGray" />
+
+                    <Button
+                        x:Name="percentChanged"
+                        Grid.Column="1"
+                        Margin="12.5,0"
+                        BackgroundColor="White"
+                        CornerRadius="75"
+                        FontSize="Large"
+                        Text="±%" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        Text="Percent Changed"
+                        TextColor="LightGray" />
+                </Grid>
+
+                <Label
+                    Margin="0,50,0,0"
+                    Text="Insert your percent value here:"
+                    TextColor="White" />
+                <Entry
+                    x:Name="percentValue"
+                    Keyboard="Numeric"
+                    Placeholder="Percent Value"
+                    PlaceholderColor="LightGray"
+                    TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>

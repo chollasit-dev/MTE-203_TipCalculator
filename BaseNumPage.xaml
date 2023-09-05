@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TipCalculator.BaseNumPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RGB to Hex Converter">
+
+    <ScrollView BackgroundColor="#222831">
+        <StackLayout Padding="25" BackgroundColor="#222831">
+
+            <!--  Result Display  -->
+            <Frame BackgroundColor="#393E46" CornerRadius="7.5">
+                <StackLayout>
+                    <Label
+                        x:Name="lblDisplay5"
+                        Margin="25,37.5,25,2.5"
+                        FontSize="37.5"
+                        HorizontalTextAlignment="Center"
+                        Text="Results"
+                        TextColor="White" />
+                    <Label
+                        Margin="25,2.5,25,42.5"
+                        HorizontalTextAlignment="Center"
+                        Text="The answer will be displayed here!"
+                        TextColor="LightGray" />
+                </StackLayout>
+            </Frame>
+
+            <BoxView
+                Margin="7.5,25"
+                BackgroundColor="#00ADB5"
+                HeightRequest="1" />
+
+            <!--  Specify Value  -->
+            <Frame
+                BackgroundColor="#222831"
+                BorderColor="#00ADB5"
+                CornerRadius="25">
+                <StackLayout>
+                    <Label
+                        Margin="0,0,0,25"
+                        Text="Enter red, green, and blue color levels, then press the convert button:"
+                        TextColor="White" />
+
+                    <!--  Red  -->
+                    <Button
+                        Margin="0,0,0,12.5"
+                        BackgroundColor="#393E46"
+                        BorderColor="#00ADB5"
+                        BorderWidth="1"
+                        CornerRadius="75"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="Start"
+                        Text="Red"
+                        TextColor="Red" />
+                    <Slider
+                        x:Name="red"
+                        Maximum="255"
+                        Minimum="0"
+                        Value="0" />
+                    <Label
+                        x:Name="redValue"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="0"
+                        TextColor="White" />
+
+                    <!--  Green  -->
+                    <Button
+                        Margin="0,25,0,25"
+                        BackgroundColor="#393E46"
+                        BorderColor="#00ADB5"
+                        BorderWidth="1"
+                        CornerRadius="75"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="Start"
+                        Text="  Green  "
+                        TextColor="#00FF00" />
+                    <Slider
+                        x:Name="green"
+                        Maximum="255"
+                        Minimum="0"
+                        Value="0" />
+                    <Label
+                        x:Name="greenValue"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="0"
+                        TextColor="White" />
+
+                    <!--  Blue  -->
+                    <Button
+                        Margin="0,25,0,25"
+                        BackgroundColor="#393E46"
+                        BorderColor="#00ADB5"
+                        BorderWidth="1"
+                        CornerRadius="75"
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        HorizontalOptions="Start"
+                        Text="  Blue  "
+                        TextColor="#099FFF" />
+                    <Slider
+                        x:Name="blue"
+                        Maximum="255"
+                        Minimum="0"
+                        Value="0" />
+                    <Label
+                        x:Name="blueValue"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="0"
+                        TextColor="White" />
+                </StackLayout>
+            </Frame>
+
+            <Button
+                x:Name="calculateHEX"
+                Margin="0,20,0,0"
+                BackgroundColor="#00ADB5"
+                Clicked="calculateHEX_Clicked"
+                CornerRadius="75"
+                HorizontalOptions="Center"
+                Text="       Calculate!      "
+                TextColor="White" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TipCalculator.BMIPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="BMI Calculator">
+
+    <ScrollView>
+        <StackLayout Padding="25" BackgroundColor="#222831">
+
+            <!--  Result Display  -->
+            <Frame BackgroundColor="#393E46" CornerRadius="7.5">
+                <StackLayout>
+                    <Label
+                        x:Name="lblDisplay3"
+                        Margin="25,37.5,25,2.5"
+                        FontSize="37.5"
+                        HorizontalTextAlignment="Center"
+                        Text="BMI"
+                        TextColor="White" />
+                    <Label
+                        x:Name="lblDisplay4"
+                        Margin="25,2.5,25,37.5"
+                        HorizontalTextAlignment="Center"
+                        Text="Your BMI will be displayed here!"
+                        TextColor="LightGray" />
+                </StackLayout>
+            </Frame>
+
+            <BoxView
+                Margin="7.5,25"
+                BackgroundColor="#00ADB5"
+                HeightRequest="1" />
+
+            <!--  Specify Information  -->
+            <Frame
+                BackgroundColor="#222831"
+                BorderColor="#00ADB5"
+                CornerRadius="25">
+                <StackLayout>
+                    <Label Text="Select your age span here:" TextColor="White" />
+                    <Picker
+                        x:Name="ageSpan"
+                        Title="Age Span"
+                        TextColor="White"
+                        TitleColor="#FF0099">
+                        <Picker.Items>
+                            <x:String>Child Age (2-19)</x:String>
+                            <x:String>Adult Age (20+)</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Label
+                        Margin="0,50,0,0"
+                        Text="Specify your weight here:"
+                        TextColor="White" />
+                    <Entry
+                        x:Name="weight"
+                        Keyboard="Numeric"
+                        Placeholder="Weight (kg)"
+                        PlaceholderColor="LightGray"
+                        TextColor="White" />
+
+                    <Label
+                        Margin="0,50,0,25"
+                        Text="Specify your height here:"
+                        TextColor="White" />
+                    <Slider
+                        x:Name="sldHeight"
+                        Maximum="200"
+                        Minimum="50"
+                        Value="125" />
+                    <Label
+                        x:Name="height"
+                        FontSize="Medium"
+                        HorizontalTextAlignment="Center"
+                        Text="125 cm"
+                        TextColor="White" />
+                </StackLayout>
+            </Frame>
+
+            <Button
+                x:Name="calculateBMI"
+                Margin="0,20,0,0"
+                BackgroundColor="#00ADB5"
+                Clicked="calculateBMI_Clicked"
+                CornerRadius="75"
+                HorizontalOptions="Center"
+                Text="       Calculate!      "
+                TextColor="White" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

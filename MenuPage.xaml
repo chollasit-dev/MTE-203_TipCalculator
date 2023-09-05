@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TipCalculator.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Main Menu">
+
+    <Grid BackgroundColor="#00ADB5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <BoxView
+            Margin="12.5"
+            CornerRadius="25"
+            Color="#71C9CE" />
+
+        <StackLayout Padding="37.5" VerticalOptions="Center">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                Text="TipCalculator+"
+                TextColor="White" />
+            <Label Text="Alpha Version 1.01a (Prototype)" TextColor="Black" />
+            <Label />
+            <Label
+                FontSize="Medium"
+                Text="The most convinient calculator application"
+                TextColor="Black" />
+        </StackLayout>
+
+        <StackLayout
+            Grid.Row="1"
+            Padding="12.5"
+            BackgroundColor="#393E46">
+            <Label
+                FontAttributes="Bold"
+                Text="Basic"
+                TextColor="White" />
+            <Button
+                x:Name="normalCalculator"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                ImageSource="normalCalculator.png"
+                Text="   Calculator"
+                TextColor="White" />
+            <BoxView
+                Margin="12.5,25"
+                BackgroundColor="White"
+                HeightRequest="1" />
+            <Label
+                FontAttributes="Bold"
+                Text="Additional"
+                TextColor="White" />
+            <Button
+                x:Name="percentage"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                ImageSource="percentage.png"
+                Text="   Percentage"
+                TextColor="White" />
+            <Button
+                x:Name="BMI"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                ImageSource="bmi.png"
+                Text="   Body Mass Index (BMI)"
+                TextColor="White" />
+            <Button
+                x:Name="baseNumber"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                ImageSource="hex.png"
+                Text="   RGB to Hex Converter"
+                TextColor="White" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
